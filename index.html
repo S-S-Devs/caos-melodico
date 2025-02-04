@@ -12,7 +12,53 @@
   <script src="/main.js"></script>
 </head>
 <body>
+     <!-- FORMULARIO -->
+     <div style="display: none;" id="login"> 
+      <h1 id="titulo"></h1>
+      <div id="formularios">
+          <!-- Formulario de Información Personal -->
+          <form id="personal-info-form" action="#" method="post">
+              <h3>Información Personal</h3>
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required><br>
+              
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required><br>
+              
+              <label for="age">Edad:</label>
+              <input type="number" id="age" name="age" required><br>
+              
+              <label for="gender">Género:</label>
+              <select id="gender" name="gender" required>
+                  <option value="">Seleccione...</option>
+                  <option value="male">Masculino</option>
+                  <option value="female">Femenino</option>
+                  <option value="other">Otro</option>
+              </select><br>
+          </form>
+          <form id="preferences-form">
+              <h3>Preferencias</h3>
+              <label for="hobbies">Pasatiempos:</label>
+              <input type="checkbox" id="hobby1" name="hobbies" value="reading"> Leer<br>
+              <input type="checkbox" id="hobby2" name="hobbies" value="traveling"> Viajar<br>
+              <input type="checkbox" id="hobby3" name="hobbies" value="sports"> Deportes<br>
+              <br>
+              <label for="newsletter">Suscribirse al boletín:</label>
+              <input type="radio" id="yes" name="newsletter" value="yes" required> Sí<br>
+              <input type="radio" id="no" name="newsletter" value="no" required> No<br>
+              <br>
+              <label for="feedback">Comentarios:</label>
+              <textarea id="feedback" name="feedback" required></textarea><br>
+              
+              <button id="datos" type="submit" onclick="">Enviar</button>
+              <button onclick="mostrarCaosMelodico()">Volver</button>
+          </form>
+      </div>
+  </div>
+
+
   <!--BARRA DE NAVEGACION-->
+  <div  id="CaosMelodico">
   <div class="navbar" id="inicio">
     <header>
       <div class="fechas">
@@ -26,39 +72,44 @@
         <a href="#inicio">Inicio</a>
         <a href="#articulos">Artículos</a>
         <a href="#secciones">Secciones</a>
-        <a href="#inicio-sesion">Inicio de Sesión</a>
+        <a href="#inicio-sesion" onclick="mostrarLogin()">Inicio de Sesión</a>
         <a href="#contacto">Contacto</a>
       </div>
     </nav>
   </div>
+
   <!--ARTICULOS-->
   <div class="art" id="articulos">
     <div class="articulos-container">
       <h1>Artículos destacados</h1>
       <div id="articulos" class="articulos">
         <div class="articulo">
-          <h2>Artículo 1</h2>
+          <h2>Top Bandas de Metal 2024</h2>
           <figure>
-            <img src="https://via.placeholder.com/400x200?text=Artículo+1" alt="Artículo 1">
-            <figcaption>Esta es la leyenda del Artículo 1.</figcaption>
+            <img src="/IMG/topBandas-min.jpg" alt="Historia del Metal">
+            <figcaption>Bandas del momento 2024</figcaption>
           </figure>
-          <p>Este es el contenido del artículo 1.</p>
+          <p>Mira cuales fueron las bandas de este 2024 que mas impacto han tenido éste ultimo año.</p>
         </div>
         <div class="articulo">
-          <h2>Artículo 2</h2>
+          <h2>Bandas Icónicas</h2>
           <figure>
-            <img src="https://via.placeholder.com/400x200?text=Artículo+2" alt="Artículo 2">
-            <figcaption>Esta es la leyenda del Artículo 2.</figcaption>
+            <img src="/IMG/bandasIconicas-min.jpg" alt="Bandas Icónicas">
+            <figcaption>Las bandas más influyentes del metal.</figcaption>
           </figure>
-          <p>Este es el contenido del artículo 2.</p>
+          <p>Conoce a las bandas que han dejado una huella imborrable en el mundo del metal.</p>
         </div>
         <div class="articulo">
-          <h2>Artículo 3</h2>
+          <h2>Metal Sinfónico</h2>
           <figure>
-            <img src="https://via.placeholder.com/400x200?text=Artículo+3" alt="Artículo 3">
-            <figcaption>Esta es la leyenda del Artículo 3.</figcaption>
+            <img src="/IMG/metalSimfonico-min.jpg" alt="Subgéneros del Metal">
+            <figcaption>Metal Sinfónico </figcaption>
           </figure>
-          <p>Este es el contenido del artículo 3.</p>
+          <p>El metal sinfónico es un subgénero del heavy metal que combina las 
+            características propias de este género, como baterías y guitarras pesadas, 
+            con diferentes elementos de la música académica como instrumentos clásicos, 
+            orquestas, coros o voces líricas, es decir, los elementos que se tocan son similares
+             a una sinfonía clásica.</p>
         </div>
       </div>
     </div>
@@ -69,7 +120,7 @@
       <div class="banner-content">
           <h2>¡Gran Venta de Verano!</h2>
           <p>No te pierdas nuestras ofertas exclusivas en productos seleccionados. Ahorra hasta un 50% en artículos de moda, tecnología y más.</p>
-          <img src="https://via.placeholder.com/600x200?text=Gran+Venta+de+Verano" alt="Gran Venta de Verano" class="banner-image">
+          <img src="/IMG/festival-min.jpg" alt="Gran Venta de Verano" class="banner-image">
           <figcaption class="banner-caption">Aprovecha nuestras increíbles ofertas de verano.</figcaption>
           <a href="#" class="banner-button">¡Compra Ahora!</a>
         </div>
@@ -85,7 +136,7 @@
                       width: 100%;
                       height: 500px;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/historiaDelMetal.jpeg" alt="">
+                      src="/IMG/historiaDelMetal-min.jpeg" alt="">
               <article  class="postMayor">
                   <div style="padding: 10px;">
                       <h2 style="color: white;">Historia del Metal Pesado</h2>
@@ -110,7 +161,7 @@
                       width: 100%;
                       height: 50%;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/clasicas.jpg" alt="">
+                      src="/IMG/clasicas-min.jpg" alt="">
                       <div class="postHoverEfect">
                       <h2>Bandas Clásicas</h2>
                       <p>Fecha de publicación: 02/01/2023</p>
@@ -124,7 +175,7 @@
                       width: 100%;
                       height: 50%;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/bandaModerna.webp" alt="">
+                      src="/IMG/bandaModerna.webp" alt="">
                       <div class="postHoverEfect">
                       <h2>Bandas Modernas</h2>
                       <p>Fecha de publicación: 03/01/2023</p>
@@ -138,7 +189,7 @@
                       width: 100%;
                       height: 50%;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/subgenero.png" alt="">
+                      src="/IMG/subgenero-min.png" alt="">
                       <div class="postHoverEfect">
                       <h2>Subgéneros del Metal</h2>
                       <p>Fecha de publicación: 04/01/2023</p>
@@ -152,7 +203,7 @@
                       width: 100%;
                       height: 50%;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/concierto.jpg" alt="">
+                      src="/IMG/concierto-min.jpg" alt="">
                       <div class="postHoverEfect">
                       <h2>Conciertos Memorables</h2>
                       <p>Fecha de publicación: 05/01/2023</p>
@@ -167,7 +218,7 @@
                       width: 100%;
                       height: 50%;
                       transition: opacity 0.5s ease;" 
-                      src="/components/Imagenes/entrevista.jpg" alt="">
+                      src="/IMG/entrevista-min.jpg" alt="">
                       <div class="postHoverEfect">
                           <div style="padding: 20px;">
                               <h2 style="color: white;">Entrevistas Exclusivas</h2>
@@ -196,6 +247,7 @@
       </section>
     </div>
   </div>
+ 
   <!--FOOTER-->
   <footer>
     <div class="footer-content" id="contacto">
@@ -214,5 +266,6 @@
         </div>
     </div>
 </footer>
+</div> 
 </body>
 </html>
