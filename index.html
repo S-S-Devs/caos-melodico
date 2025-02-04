@@ -6,12 +6,14 @@
   <title>Caos Melodico</title>
   <!--ESTILOS-->
   <link rel="stylesheet" href="/styles.css">
+  <!-- Font Awesome --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!--JAVASCRIPT-->
   <script src="/main.js"></script>
 </head>
 <body>
   <!--BARRA DE NAVEGACION-->
-  <div class="navbar">
+  <div class="navbar" id="inicio">
     <header>
       <div class="fechas">
           <p>Fecha actual: <span id="fecha-sistema"></span></p>
@@ -30,7 +32,7 @@
     </nav>
   </div>
   <!--ARTICULOS-->
-  <div class="art">
+  <div class="art" id="articulos">
     <div class="articulos-container">
       <h1>Artículos destacados</h1>
       <div id="articulos" class="articulos">
@@ -74,7 +76,7 @@
     </div>  
   </div>
   <!--CATEGORIAS-->
-  <div class="categorias">
+  <div class="categorias" id="secciones">
     <div class="main">
       <h1>Artículos destacados</h1>
       <section class="postsPadre">
@@ -194,5 +196,23 @@
       </section>
     </div>
   </div>
+  <!--FOOTER-->
+  <footer>
+    <div class="footer-content" id="contacto">
+        <div class="footer-column socials-column">
+            <h4>Redes Sociales</h4>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-column info-column">
+            <p>&copy; 2025 Caos Melodico, el blog. Todos los derechos reservados.</p>
+            <p id="browser-info"></p> <!-- Aquí se mostrará la información del navegador -->
+        </div>
+    </div>
+</footer>
 </body>
 </html>
