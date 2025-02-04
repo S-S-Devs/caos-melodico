@@ -1,0 +1,69 @@
+/* ESTILOS GENERALES */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* BARRA DE NAVEGACION */
+
+.navbar {
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+header {
+  background-color: #838383;
+  color: black;
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.fechas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 1.5%;
+  background-color: #838383;
+  color: #000000;
+  font-weight: bolder;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #161616;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 5px;
+}
+
+.logo {
+  color: white;
+  margin-left: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  right: 0;
+  margin-right: 20px;
+}
+
+nav a:hover {
+  background-color: #ddd; /* Color de fondo al pasar el ratón */
+  color: black; /* Color del texto al pasar el ratón */
+  border-radius: 1rem;
+}
