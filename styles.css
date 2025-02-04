@@ -63,7 +63,59 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #ddd; /* Color de fondo al pasar el ratón */
-  color: black; /* Color del texto al pasar el ratón */
+  background-color: #ddd;
+  color: black;
   border-radius: 1rem;
+}
+
+/*ARTICULOS*/
+
+.art {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.articulos-container {
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 10%;
+  padding: 20px 0;
+}
+
+.articulos-container h1{
+  padding-bottom: 2%;
+  color: #ddd;
+}
+
+.articulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.articulo {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, 
+              rgba(255, 255, 255, 0.12) 0px -12px 30px, 
+              rgba(255, 255, 255, 0.12) 0px 4px 6px, 
+              rgba(255, 255, 255, 0.17) 0px 12px 13px, 
+              rgba(255, 255, 255, 0.09) 0px -3px 5px;
+}
+
+.articulo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 2% 0;
+}
+
+.articulo p{
+  margin: 2% 1%;
 }
