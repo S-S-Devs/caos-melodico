@@ -79,13 +79,28 @@ function initFormularios() {
     });
   });
 
-  document.getElementById("datos").onclick = function () {
-    alert('Nombre: ' + form.elements[0].value + '\n'
-       + 'Correo: ' + form.elements[1].value + '\n' 
-       + 'Edad: ' + form.elements[2].value + '\n');  
-    document.getElementById("login").style.display = "none";
-    document.getElementById("CaosMelodico").style.display = "block";
-  };
+  document.getElementById("datos").onclick = function (event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
+    let valid = true;
+    inputs.forEach(input => {
+      if (!input.value) {
+        valid = false;
+        input.style.borderColor = 'red'; // Marca el campo vacío en rojo
+      } else {
+        input.style.borderColor = ''; // Restaura el color del borde
+      }
+    });
+
+    if (valid) {
+      alert('Nombre: ' + form.elements[0].value + '\n'
+         + 'Correo: ' + form.elements[1].value + '\n' 
+         + 'Edad: ' + form.elements[2].value + '\n');  
+      document.getElementById("login").style.display = "none";
+      document.getElementById("CaosMelodico").style.display = "block";
+    } else {
+      alert('Por favor, complete todos los campos obligatorios.');
+    }
+  }
 }
 
 // Muestra el formulario de login
