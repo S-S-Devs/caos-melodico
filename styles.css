@@ -119,3 +119,55 @@ nav a:hover {
 .articulo p{
   margin: 2% 1%;
 }
+
+/*PUBLICIDAD*/
+
+.banner {
+  background-color: #838383;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.banner-caption {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.banner-button {
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 20px;
+  margin-bottom: 1%;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.banner-button:hover {
+  background-color: #e0e0e0;
+}
